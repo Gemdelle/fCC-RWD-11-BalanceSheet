@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balance Sheet</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Alice&family=Berkshire+Swash&family=Cinzel&family=Delius&family=EB+Garamond&family=Fredericka+the+Great&family=Great+Vibes&family=Gugi&family=Henny+Penny&family=Homemade+Apple&family=IBM+Plex+Serif&family=IM+Fell+English+SC&family=Julius+Sans+One&family=La+Belle+Aurore&family=Lemonada&family=Macondo&family=Old+Standard+TT:ital@0;1&family=Pinyon+Script&family=Rubik+Marker+Hatch&family=Rubik+Microbe&family=Satisfy&family=Tangerine&family=Titillium+Web&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./stylesPERSONAL.css">
 </head>
 
 <body>
     <main>
-
         <section>
             <h1>
-                <span class="flex">
-                    <span>AcmeWidgetCorp</span>
-                    <span>Balance Sheet</span>
+                <span id="introduction">
+                    <span>BridyamCorp</span>
+                    <img id="divider" src="Images/Divider.png">
+                    <span id="balance"><i>Balance Sheet</i></span>
                 </span>
             </h1>
             <div id="years" aria-hidden=true>
@@ -25,7 +30,7 @@
             </div>
             <div class="table-wrap">
                 <table>
-                    <caption>Assets</caption>
+                        <caption><img id="arrow01" class="arrow" src="Images/Arrow.png">Assets</caption>
                     <thead>
                         <tr>
                             <td></td>
@@ -35,19 +40,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="data">
+                        <tr class="data hidden" id="data01">
                             <th>Cash <span class="description">This is the cash we currently have on hand.</span></th>
                             <td>$25</td>
                             <td>$30</td>
                             <td class="current">$28</td>
                         </tr>
-                        <tr class="data">
+                        <tr class="data hidden" id="data02">
                             <th>Checking <span class="description">Our primary transactional account.</span></th>
                             <td>$54</td>
                             <td>$56</td>
                             <td class="current">$53</td>
                         </tr>
-                        <tr class="data">
+                        <tr class="data hidden" id="data03">
                             <th>Savings <span class="description">Funds set aside for emergencies.</span></th>
                             <td>$500</td>
                             <td>$650</td>
@@ -64,7 +69,7 @@
                 </table>
                 <!-- HTML tables use the caption element to describe what the table is about. The caption element should always be the first child of a table, but can be positioned with the caption-side CSS property. -->
                 <table>
-                    <caption>Liabilities</caption>
+                    <caption><img id="arrow02" class="arrow" src="Images/Arrow.png">Liabilities</caption>
                     <thead>
                         <tr>
                             <td>
@@ -75,21 +80,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="data">
+                        <tr class="data hidden" id="data04">
                             <th>Loans <span class="description">The outstanding balance on our startup loan.</span>
                             <td>$500</td>
                             <td>$250</td>
                             <td class="current">$0</td>
                             </th>
                         </tr>
-                        <tr class="data">
+                        <tr class="data hidden" id="data05">
                             <th>Expenses <span class="description">Annual anticipated expenses, such as payroll.</span>
                             </th>
                             <td>$200</td>
                             <td>$300</td>
                             <td class="current">$400</td>
                         </tr>
-                        <tr class="data">
+                        <tr class="data hidden" id="data06">
                             <th>Credit <span class="description">The outstanding balance on our credit card.</span></th>
                             <td>$50</td>
                             <td>$50</td>
@@ -119,12 +124,14 @@
                             <td>$-171</td>
                             <td>$136</td>
                             <td class="current">$334</td>
-                          </tr>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </section>
     </main>
+
+    <script src="balance.js"></script>
 </body>
 
 </html>

@@ -1,15 +1,60 @@
 html {
     box-sizing: border-box;
+    
 }
 
 body {
-    font-family: sans-serif;
-    color: #0a0a23;
+    margin-top: 30px;
+    font-family: 'Old Standard TT', serif;
+    color: #230a0a;
+    background-color: #634346;
+    height: 650px;
+    max-height: 2000px;
 }
 
 /* The sr-only class. You can use CSS to make elements with this class completely hidden from the visual page, but still be announced by screen readers. */
 
 /* The CSS clip property is used to define the visible portions of an element.  */
+
+main {
+    padding: 60px;
+}
+
+#divider {
+    width: 15vw;
+}
+
+#introduction {
+    display: flex;
+    flex-direction: column;
+}
+
+#balance {
+    font-weight: normal;
+}
+
+.arrow {
+    height: 18px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.hidden {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+}
+
+.rotation {
+    transform: rotate(90deg);
+}
+
+#data01,
+#data02,
+#data03 {
+    transition: all 300ms ease-in-out;
+}
 
 span[class~="sr-only"] {
     border: 0 !important;
@@ -42,14 +87,11 @@ h1 .flex span:first-of-type {
     font-size: 0.7em;
 }
 
-h1 .flex span:last-of-type {
-    font-size: 1.2em;
-}
-
 section {
     max-width: 40rem;
     margin: 0 auto;
-    border: 2px solid #d0d0d5;
+    border: 5px ridge #d0d0d5;
+    background-color: white;
 }
 
 #years {
@@ -57,7 +99,7 @@ section {
     justify-content: flex-end;
     position: sticky;
     top: 0;
-    background-color: #0a0a23;
+    background-color: #330d11;
     color: #fff;
     z-index: 999;
     margin: 0 -2px;
@@ -83,9 +125,9 @@ table {
 }
 
 table caption {
-    color: #356eaf;
+    color: #642e2e;
     font-size: 1.3em;
-    font-weight: normal;
+    font-weight: bold;
     position: absolute;
     top: -2.25rem;
     left: 0.5rem;
@@ -104,8 +146,9 @@ tbody th {
 /* The key difference between tr[class="total"] and tr.total is that the first will select tr elements where the only class is total. The second will select tr elements where the class includes total. */
 
 tr[class="total"] {
-    border-bottom: 4px double #0a0a23;
+    border-bottom: 4px double #230a0a;
     font-weight: bold;
+    transition: all 300ms ease-in-out;
 }
 
 tr[class="total"] th {
@@ -123,7 +166,7 @@ tr.total td:nth-of-type(3) {
 }
 
 tr.total:hover {
-    background-color: #99c9ff;
+    background-color: #c8a5a5;
 }
 
 td[class="current"] {
