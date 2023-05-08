@@ -7,7 +7,7 @@ body {
     margin-top: 30px;
     font-family: 'Old Standard TT', serif;
     color: #230a0a;
-    background-color: #634346;
+    background-image: linear-gradient(90deg, #34292a, #a87c81, #34292a);
     height: 650px;
     max-height: 2000px;
 }
